@@ -68,3 +68,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// Function to update traffic statistics
+function updateTrafficStats() {
+    // Update page views
+    document.getElementById('pageViews').textContent = getRandomNumber(5000, 10000);
+
+    // Update unique visitors
+    document.getElementById('uniqueVisitors').textContent = getRandomNumber(2000, 6000);
+
+    // Update bounce rate
+    document.getElementById('bounceRate').textContent = getRandomNumber(20, 60) + '%';
+}
+
+// Call the function initially
+updateTrafficStats();
+
+// Call the function every 5 seconds (5000 milliseconds)
+setInterval(updateTrafficStats, 3000);
