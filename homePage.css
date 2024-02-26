@@ -286,6 +286,12 @@ section {
     width: 100%;
 }
 
+.process-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .process-box {
     width: 30%;
     background-color: #f0f0f0;
@@ -298,11 +304,18 @@ section {
     background-image: linear-gradient(to right, #f0f0f0 50%, #02a0a8 50%);
     background-size: 200% 100%;
     transition: background-position 0.5s ease; /* Transition for background position */
+    text-align: left; /* Align content to the left */
 }
 
 .process-box:hover {
     background-position: -100% 0; /* Change background position on hover */
     color: white;
+}
+
+.process-box .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure content fills the entire height of the box */
 }
 
 .process-box h3 {
@@ -312,6 +325,7 @@ section {
 
 .process-box p {
     font-size: 1rem;
+    margin-top: 0; /* Remove default margin from paragraphs */
 }
 
 
