@@ -648,6 +648,53 @@ footer {
     100% { transform: translateX(0); } /* Return to start position */
 }
 
+#traffic {
+    text-align: center;
+    padding: 50px 0; 
+    width: 100%;
+    background: linear-gradient(to right, rgb(225, 225, 204), rgb(98, 174, 195)); 
+}
+
+.traffic-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+
+.traffic-stat {
+    width: 200px; 
+    height: 150px; 
+    margin: 20px; 
+    padding: 40px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #293a42; 
+    transition: transform 0.3s ease;
+}
+
+.traffic-stat h3 {
+    font-size: 1.1rem; 
+    font-style: italic;
+    font-family: 'YourCursiveFont', cursive;
+    font-weight: normal;
+}
+
+
+.traffic-stat p {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    font-family: 'YourCursiveFont', cursive;
+}
+
+
+@media (max-width: 768px) {
+    .traffic-stat {
+        width: 40%; 
+    }
+}
+
 
 /* Adjust styles as needed */
 
