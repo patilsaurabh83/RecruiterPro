@@ -177,6 +177,32 @@ section {
     margin-bottom: 0; /* Remove margin for the last paragraph */
 }
 
+.scroll-indicator img {
+    width: 60px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse-down {
+    width: 30px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    animation: moveDown 1.3s infinite alternate; /* Add animation for the scroll down effect */
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(15px); /* Adjust the distance the image moves down */
+    }
+}
+
 
 /* Service Section styles */
 #services {
