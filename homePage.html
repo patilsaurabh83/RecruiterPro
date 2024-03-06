@@ -314,15 +314,15 @@
             <input type=hidden name="oid" value="00D5j00000DAZO0">
             <input type=hidden name="retURL" value="https://patilsaurabh83.github.io/Salesforce_Forms/Thank You.html">
             <label for="name">Your Name</label>
-            <input type="text" id="last_name" name="last_name" >
+            <input type="text" id="last_name" name="last_name" required>
             <span id="nameError" class="error"></span>
     
             <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" >
+            <input type="email" id="email" name="email"  required>
             <span id="emailError" class="error"></span>
     
             <label for="message">Message</label>
-            <textarea id="message" name="description" rows="4" ></textarea>
+            <textarea id="message" name="description" rows="4" required></textarea>
             <span id="messageError" class="error"></span>
             <input type="hidden" id="lead_source" name="lead_source" value="External Contact Us">
     
