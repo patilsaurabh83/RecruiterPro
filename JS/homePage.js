@@ -184,5 +184,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
+//Copyright Year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+//To hide the links on hover and only external links will open in the new tab
+document.querySelectorAll("a").forEach(link => {
+  const isExternal = !link.href.includes(window.location.hostname); // Check if the link is external
+
+  link.style.cursor = "pointer"; // Ensure the pointer cursor is always applied
+
+  link.addEventListener("mouseover", () => {
+    link.setAttribute("data-href", link.getAttribute("href")); // Store href
+    link.removeAttribute("href"); // Remove href to hide preview
+  });
+
+  link.addEventListener("mouseout", () => {
+    link.setAttribute("href", link.getAttribute("data-href")); // Restore href
+  });
+
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default click behavior
+    const url = link.getAttribute("data-href");
+
+    if (url) {
+      if (isExternal) {
+        window.open(url, "_blank"); // Open external links in a new tab
+      } else {
+        window.location.href = url; // Open internal links in the same tab
+      }
+    }
+  });
+});
 
